@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "type": "module",
- "scripts": {
-  "dev": "nodemon src/server.js",
-  "build": "echo 'No build step needed for JS'",
-  "start": "node src/server.js",
-  "migrate:deploy": "prisma migrate deploy",
-  "postinstall": "prisma generate"
-}
-,
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "build": "echo 'No build step needed for JS'",
+    "start": "npx prisma migrate deploy && node src/server.js",
+    "migrate:deploy": "prisma migrate deploy",
+    "postinstall": "prisma generate"
+  },
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "bcrypt": "^5.1.1",
